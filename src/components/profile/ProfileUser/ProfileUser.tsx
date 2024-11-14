@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileUser = () => {
     return (
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full relative">
             <div className="flex flex-col ml-[150px] mt-[80px]">
                 <h2 className="text-black text-[35px] font-['ArsenalB']">Личный кабинет</h2>
                 <form className="flex flex-col justify-center text-[#F9F1E6] max-w-[510px] max-h-[300px] gap-[25px] h-full pt-20">
@@ -24,8 +24,7 @@ const ProfileUser = () => {
                     />
                 </form>
             </div>
-            <div className="flex flex-col items-end h-full w-full max-w-[280px] gap-24 border-b-4 border-[#3F1D11] rounded-md border-w-[90px]">
-            </div>
+            <div className="bottom-2 w-full absolute max-w-[280px] hidden mobile-xs:block h-1 bg-[#3F1D11] rounded-md"></div>
         </div>
     );
 }

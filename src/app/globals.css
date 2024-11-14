@@ -71,3 +71,14 @@ body {
 .scrollbar-custom::-webkit-scrollbar-button {
   display: none;
 }
+
+.clamp-banner__down {
+  font-size: clamp(2rem, 8vw, 6rem);
+}
+.clamp-banner__up {
+  font-size: clamp(4rem, 10vw, 8rem);
+}
+
+.search_width{
+  width: min(100%, 15rem);
+}

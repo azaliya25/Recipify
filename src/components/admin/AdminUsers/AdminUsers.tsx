@@ -2,7 +2,7 @@ import React from "react";
 
 const AdminUsers = () => {
     return (
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full relative">
             <div className="flex flex-col mt-[30px]">
                 <div className="flex w-full justify-between items-center">
                     <h2 className="text-black text-[45px] font-['ArsenalB']">Список пользователей</h2>
@@ -50,8 +50,7 @@ const AdminUsers = () => {
                 </div>
 
             </div>
-            <div className="flex flex-col items-end h-full w-full max-w-[280px] gap-24 border-b-4 border-[#3F1D11] rounded-md border-w-[90px]">
-            </div>
+            <div className="bottom-2 w-full absolute max-w-[280px] hidden mobile-xs:block h-1 bg-[#3F1D11] rounded-md"></div>
         </div>
     );
 }

@@ -3,16 +3,18 @@ import AboutText from "@/components/about/AboutText.tsx/AboutText.tsx";
 
 export default function About() {
     return (
-        <div className="flex justify-center items-center mt-[190px]">
-            <div className="flex justify-center items-center top-0 text-[#F9F1E6] w-full max-h-[620px] gap-64 ">
+        <div className="flex justify-center items-center h-[850px] w-full relative">
+            <div className="fixed inset-0 w-full h-full overflow-hidden">
                 <Image
-                    className="w-full h-full"
+                    className="w-full h-full object-cover"
                     src="/grid.png"
-                    alt="fon image"
-                    width={1203}
-                    height={1400}
+                    alt=""
+                    layout="fill"
                     priority
                 />
+            </div>
+
+            <div className="flex justify-center items-center top-0 w-full h-full max-h-[620px] z-10">
                 <AboutText />
             </div>
         </div>
