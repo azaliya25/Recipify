@@ -36,22 +36,22 @@ body {
   /* overscroll-behavior-x: contain; */
 }
 
-.blur__banner{
+.blur__banner {
   backdrop-filter: blur(5px);
 }
 
-.container{
+.container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.dr_shaw{
+.dr_shaw {
   box-shadow: 0 0 15px 15px #00000040;
 }
 
 .scrollbar-custom {
   scrollbar-width: thin;
-  scrollbar-color: #3F1D11 transparent; 
+  scrollbar-color: #3F1D11 transparent;
 }
 
 .scrollbar-custom::-webkit-scrollbar {
@@ -59,7 +59,7 @@ body {
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
@@ -75,10 +75,71 @@ body {
 .clamp-banner__down {
   font-size: clamp(2rem, 8vw, 6rem);
 }
+
 .clamp-banner__up {
   font-size: clamp(4rem, 10vw, 8rem);
 }
 
-.search_width{
+.search_width {
   width: min(100%, 15rem);
+}
+
+
+@keyframes burgerPulse1 {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(0.4);
+  }
+}
+
+@keyframes burgerPulse2 {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  30% {
+    transform: scaleX(0.6);
+  }
+
+  60% {
+    transform: scaleX(0.7);
+  }
+}
+
+@keyframes burgerPulse3 {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  40% {
+    transform: scaleX(0.4);
+  }
+
+  80% {
+    transform: scaleX(0.6);
+  }
+}
+
+.animate-burgerPulse1 {
+  animation: burgerPulse1 1s ease-in-out infinite;
+  transform-origin: right;
+}
+
+.animate-burgerPulse2 {
+  animation: burgerPulse2 1.2s ease-in-out infinite 0.1s;
+  transform-origin: right;
+}
+
+.animate-burgerPulse3 {
+  animation: burgerPulse3 1.3s ease-in-out infinite 0.2s;
+  transform-origin: right;
 }

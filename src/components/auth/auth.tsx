@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState } from "react";
 
 export default function Auth() {
-    const [isLogin, setIsLogin] = useState(false); // State to toggle between login and registration
+    const [isLogin, setIsLogin] = useState(false); 
 
     const toggleForm = () => {
         setIsLogin(!isLogin);
@@ -12,14 +12,12 @@ export default function Auth() {
 
     return (
         <div className="relative flex justify-center h-screen mt-20 ml-[25%]">
-            {/* Toggle Button */}
             <div
                 onClick={toggleForm}
                 className="flex justify-between items-center gap-6 max-h-[50px] w-full min-w-[155px] bg-black border-black border rounded-[20px] py-[8px] px-[15px] text-[#F9F1E6] text-[12px] font-['ArsenalB'] cursor-pointer z-50 mt-[15px] mr-[-80px]"
             >
                 {isLogin ? (
                     <>
-                        {/* Display the text first, then the alternate image for "регистрация" */}
                         <span className="flex">регистрация</span>
                         <div className="flex w-[30px]">
                             <Image src="/arrows.png" alt="arrow icon" width={30} height={30} priority />
@@ -27,7 +25,6 @@ export default function Auth() {
                     </>
                 ) : (
                     <>
-                        {/* Display the image first, then the text for "вход" */}
                         <div className="flex w-[30px]">
                             <Image src="/arrowl.png" alt="arrow icon" width={30} height={30} priority />
                         </div>
@@ -37,13 +34,11 @@ export default function Auth() {
             </div>
 
 
-            {/* Form Container with Slide Effect */}
             <form
                 className={`flex flex-col h-screen blur__banner backdrop-opacity-10 backdrop-invert bg-[#DABF94]/60 rounded-[20px] text-[#F9F1E6] min-w-[480px] max-h-[550px] px-[50px] pt-8 pb-14 gap-64 transition-transform duration-500 ${isLogin ? "-translate-x-[480px]" : ""
                     }`}
             >
                 <div className="flex flex-col items-end w-full h-full">
-                    {/* Home Icon */}
                     <div className={`flex ${isLogin ? "justify-start" : "justify-end"} w-full`}>
                         <Link href="../">
                             <Image src="/home_icons.png" alt="home icon" width={23} height={22} priority />
@@ -51,7 +46,6 @@ export default function Auth() {
                     </div>
 
 
-                    {/* Header Text */}
                     <div className="flex flex-col w-full mt-[40px] mb-[40px]">
                         <h2 className="text-black text-[35px] font-['ArsenalB']">{isLogin ? "ВХОД" : "РЕГИСТРАЦИЯ"}</h2>
                         <p className="text-black text-[12px] font-['ArsenalR']">
@@ -61,7 +55,6 @@ export default function Auth() {
                         </p>
                     </div>
 
-                    {/* Input Fields */}
                     <div className="flex flex-col justify-start w-full gap-[25px]">
                         {!isLogin && (
                             <input
@@ -80,7 +73,7 @@ export default function Auth() {
                             placeholder="PASSWORD"
                             className="bg-inherit border-b-black border border-x-0 border-t-0 placeholder-black font-['ArsenalR'] text-black focus:outline-none"
                         />
-                        {/* Show confirm password field only for registration */}
+
                         {!isLogin && (
                             <input
                                 type="password"
@@ -90,7 +83,6 @@ export default function Auth() {
                         )}
                     </div>
 
-                    {/* Privacy Policy and Submit Button */}
                     {!isLogin && (
                         <div className="flex items-center text-center gap-[5px] w-full mt-[40px] mb-[40px]">
                             <input type="checkbox" className="bg-inherit border-b-black border" />
